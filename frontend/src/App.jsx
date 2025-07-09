@@ -1,21 +1,26 @@
-import {Container} from "react-bootstrap";
+// src/main.jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from "./component/Header";
+import App from './App';
+import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen'; // example extra page
+import './index.css';
 import Footer from "./component/Footer";
-import HomeScreen from "./screens/HomeScreen"
-import "./index.css";
-function App() {
-  return (
-    <>
-      <Header />
-      <main className="py-3">
-        <Container>
-        <h1>Welcome To ProShop</h1>
-        <HomeScreen/>
-        </Container>
-      </main>
+import "../src/assets/styles/index.css"
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter>
+    <Header/>
+      <Routes>
+        <Route path="/" element={<HomeScreen/>}>
+          <Route index element={<HomeScreen />} />
+          <Route path="products/:id" element={<ProductScreen />} />
+        </Route>
+      </Routes>
       <Footer/>
-    </>
-  );
-}
-
+    </BrowserRouter>
+  </React.StrictMode>
+);
 export default App;
