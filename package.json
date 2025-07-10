@@ -1,0 +1,23 @@
+{
+  "name": "proshop",
+  "version": "2.0.0",
+  "description": "ecommerce application with mernstack",
+  "homepage": "https://github.com/Yashaswini2004/ProShop#readme",
+  "bugs": {
+    "url": "https://github.com/Yashaswini2004/ProShop/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yashaswini2004/ProShop.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
