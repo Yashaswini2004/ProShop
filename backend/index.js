@@ -1,9 +1,11 @@
 import express from 'express';
 import products from "./data/products.js"; // Make sure this file exists and exports an array
+import dotenv from "dotenv";
+import cors from 'cors';
 
 const port = 5000;
 const app = express();
-
+app.use(cors());
 app.get('/', (req, res) => {
     res.send('API is running...');
 });
