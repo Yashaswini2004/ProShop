@@ -14,10 +14,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
     <Header/>
       <Routes>
-        <Route path="/" element={<HomeScreen/>}>
-          <Route index element={<HomeScreen />} />
-          <Route path="products/:id" element={<ProductScreen />} />
-        </Route>
+       
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="product/:id" element={<ProductScreen />} />
+        
       </Routes>
       <Footer/>
     </BrowserRouter>
