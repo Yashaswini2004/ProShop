@@ -13,7 +13,7 @@ function HomeScreen() {
         <Loader/>
         ):error ?(
           <Message variant='danger'>
-            {error.data.message || error.error}
+            {error.error}
           </Message>
         ):(
           <Container>
